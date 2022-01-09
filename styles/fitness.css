@@ -1,0 +1,120 @@
+.container1{
+    width: 75%;
+    margin: auto auto;
+}
+.upper-container{
+    width: 50%;
+}
+h5{
+    margin-bottom: .2rem;
+}
+.tech{
+    background-color: #F2F2F2;
+    margin-right: 5px;
+    padding: 5px 8px;
+    color: #A2A2A2;
+}
+.face-div2{
+    border-top: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+p{
+    color: #A2A2A2;
+}
+.card{
+    width: 35% ;
+    margin-right: 50px;
+}
+
+.lower-container{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    margin-top:20px;
+    padding-top:40px
+}
+.lower-container-inner{
+    border-top: 2px solid lightgrey;
+    margin-top: 20px;
+    padding-top:30px
+}
+.box-card1{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    width: 33%
+}
+.box-card1 img{
+    width:98%;
+}
+.face-div1{
+    display: flex;
+    margin-top: 20px;
+}
+.face-div1-inner{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+.face-div1 img{
+    height:70px;
+    width:70px;
+    margin-right: 13px;
+}
+.face-div1 .date{
+    font-size:12px;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .container1{
+        width: 110vw;
+        padding: 4px 4px;
+        /* border: 1px solid red; */
+        margin-left: 40px;
+    }
+    .upper-container{
+        width: 100%;
+    }
+    .lower-container h5{
+        font-size: 30px;
+    }
+    .lower-container-inner{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        border-top:1px solid white;
+    }
+    .box-card1{
+        width: 100%;
+        /* border: 1px solid green; */
+        display: flex;
+        flex-direction: row;
+    }
+    .box-card1 img{
+        margin-top: 12px;
+        height: 50%;
+        width: 44%;
+    }
+    .box-card1 p{
+        display: none;
+    }
+    .box-card1-inner{
+        padding: 10px 10px;
+    }
+    .box-card1-inner h4{
+        font-size:17px
+    }
+    .date{
+        display: none;
+    }
+    .face-div1 img{
+        display: none;
+    }
+    .face-div1-inner h5{
+        font-size:15px ;
+    }
+}
