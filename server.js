@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
+const cors = require("cors");
 // const data = require('./course.json');
-const PORT=3001;
+const PORT=8080;
+
 
 const data = 
     [
@@ -15,11 +17,12 @@ const data =
         }
     ] 
 
+app.use(cors());
+
 
 app.get("/jasonData" , (req,res)=>{
     // console.log(req.query);
-    // res.send(data);
-    res.send("Hello world");
+    res.send(data);
 })
 
 app.listen(PORT , ()=>{

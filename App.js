@@ -8,7 +8,7 @@ import Hollywood from './components/Hollywood';
 import Fitness from './components/Fitness';
 import Food from './components/Food';
 import axios from 'axios';
-// import JasonData from './course.json';
+
 
 class App extends Component {
 
@@ -16,8 +16,8 @@ class App extends Component {
     dataList: []
   }
 
-  componentDidMount(){
-    axios.get("http://localhost:3001/jasonData")
+  handleData = ()=>{
+    axios.get("http://localhost:8080/jasonData")
     .then(response=>{
       console.log(response);
       this.setState({
@@ -29,11 +29,21 @@ class App extends Component {
     })
   }
 
+  componentDidMount= ()=>{
+    axios.get("http://localhost:8080/jasonData")
+    .then(response=>{})
+    .catch(error=>{
+      console.log(error);
+    })
+    .finally(()=>{
+      this.handleData();
+    })
+  }
+
 
   render(){
     return (
       <>
-        {this.state.dataList}
         <Router>
 
           <Routes>
